@@ -5,7 +5,8 @@ const Poisoned = (props) => {
         <div>
             <h3>Poisoned</h3>
             <ul>
-                <li>Creature has disadvantage on attack rolls and ability checks.</li>
+                <li>Creature has disadvantage on attack rolls 
+                    and ability checks.</li>
             </ul>
         </div>
     )
