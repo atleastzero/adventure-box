@@ -12,4 +12,4 @@ const Deafened = (props) => {
     )
 }
 
-export default Defeaned
+export default Deafened

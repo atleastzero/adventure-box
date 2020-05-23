@@ -3,6 +3,7 @@ import './App.css';
 import CharacterAdvancement from './Snippets/CharacterAdvancement';
 import AbilityModifiers from './Snippets/AbilityModifiers'
 import PassivePerception from './Snippets/PassivePerception';
+import Conditions from './Snippets/Conditions/Conditions';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <CharacterAdvancement />
       <AbilityModifiers />
       <PassivePerception />
+      <Conditions />
     </div>
   );
 }
