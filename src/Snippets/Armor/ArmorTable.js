@@ -3,63 +3,64 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
-const Armor = props => {
-    // Armor type description popovers
-    const lightPop = (
-        <Popover>
-            <Popover.Title as="h4">Light Armor</Popover.Title>
-            <Popover.Content>
-                <p>Made from supple and thin materials, light 
-                    armor favors agile adventurers since it 
-                    offers some protection without sacrificing 
-                    mobility. If you wear light armor, you add 
-                    your Dexterity modifier to the base number 
-                    from your Armor Class.</p>
-            </Popover.Content>
-        </Popover>
-    );
-    const mediumPop = (
-        <Popover>
-            <Popover.Title as="h4">Medium Armor</Popover.Title>
-            <Popover.Content>
-                <p>Medium armor offers more protection than 
-                    light armor, but it also impairs your 
-                    movement more. If you wear medium armor, 
-                    you add your Dexterity modifier, to a
-                    maximum of +2, to the base number from your
-                    armor type to determine your Armor Class.</p>
-            </Popover.Content>
-        </Popover>
-    );
-    const heavyPop = (
-        <Popover>
-            <Popover.Title as="h4">Heavy Armor</Popover.Title>
-            <Popover.Content>
-                <p>Of all the armor categories, heavy armor 
-                    offers the best protection. These suits of 
-                    armor cover the entire body and are designed 
-                    to stop a wide range of attacks. Only 
-                    proficient warriors can manage their weight 
-                    and bulk.</p>
-                <p>Heavy armor doesn't let you add your 
-                    Dexterity modifier to your Armor Class, but 
-                    it also doesn't penalize you if your
-                    Dexterity modifier is negative.</p>
-            </Popover.Content>
-        </Popover>
-    );
-    const shieldPop = (
-        <Popover>
-            <Popover.Title as="h4">Shields</Popover.Title>
-            <Popover.Content>
-                <p>A shield is made from wood or metal and is 
-                    carried in one hand. Wielding a shield 
-                    increases your Armor Class by 2. You can 
-                    benefit from only one shield at a time.</p>
-            </Popover.Content>
-        </Popover>
-    );
+// Armor type description popovers
+export const lightArmorPop = (
+    <Popover>
+        <Popover.Title as="h4">Light Armor</Popover.Title>
+        <Popover.Content>
+            <p>Made from supple and thin materials, light 
+                armor favors agile adventurers since it 
+                offers some protection without sacrificing 
+                mobility. If you wear light armor, you add 
+                your Dexterity modifier to the base number 
+                from your Armor Class.</p>
+        </Popover.Content>
+    </Popover>
+);
+export const mediumArmorPop = (
+    <Popover>
+        <Popover.Title as="h4">Medium Armor</Popover.Title>
+        <Popover.Content>
+            <p>Medium armor offers more protection than 
+                light armor, but it also impairs your 
+                movement more. If you wear medium armor, 
+                you add your Dexterity modifier, to a
+                maximum of +2, to the base number from your
+                armor type to determine your Armor Class.</p>
+        </Popover.Content>
+    </Popover>
+);
+export const heavyArmorPop = (
+    <Popover>
+        <Popover.Title as="h4">Heavy Armor</Popover.Title>
+        <Popover.Content>
+            <p>Of all the armor categories, heavy armor 
+                offers the best protection. These suits of 
+                armor cover the entire body and are designed 
+                to stop a wide range of attacks. Only 
+                proficient warriors can manage their weight 
+                and bulk.</p>
+            <p>Heavy armor doesn't let you add your 
+                Dexterity modifier to your Armor Class, but 
+                it also doesn't penalize you if your
+                Dexterity modifier is negative.</p>
+        </Popover.Content>
+    </Popover>
+);
+export const shieldPop = (
+    <Popover>
+        <Popover.Title as="h4">Shields</Popover.Title>
+        <Popover.Content>
+            <p>A shield is made from wood or metal and is 
+                carried in one hand. Wielding a shield 
+                increases your Armor Class by 2. You can 
+                benefit from only one shield at a time.</p>
+        </Popover.Content>
+    </Popover>
+);
 
+
+const ArmorTable = props => {
     // Armor description popovers
     // Light armors
     const paddedPop = (
@@ -225,7 +226,7 @@ const Armor = props => {
                     <OverlayTrigger 
                         trigger="hover" 
                         placement="right" 
-                        overlay={lightPop}
+                        overlay={lightArmorPop}
                     >
                         <em>Light Armor</em>
                     </OverlayTrigger>
@@ -276,7 +277,7 @@ const Armor = props => {
                     <OverlayTrigger 
                         trigger="hover" 
                         placement="right" 
-                        overlay={mediumPop}
+                        overlay={mediumArmorPop}
                     >
                         <em>Medium Armor</em>
                     </OverlayTrigger>
@@ -355,7 +356,7 @@ const Armor = props => {
                     <OverlayTrigger 
                         trigger="hover" 
                         placement="right" 
-                        overlay={heavyPop}
+                        overlay={heavyArmorPop}
                     >
                         <em>Heavy Armor</em>
                     </OverlayTrigger>
@@ -440,9 +441,8 @@ const Armor = props => {
                     <td>6 lb.</td>
                 </tr>
             </table>
-            <Popover trigger='hover' placement='right'></Popover>
         </div> 
     )
 }
 
-export default Armor
+export default ArmorTable

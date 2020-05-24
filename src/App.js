@@ -5,6 +5,8 @@ import AbilityModifiers from './Snippets/AbilityModifiers'
 import PassivePerception from './Snippets/PassivePerception'
 import Conditions from './Snippets/Conditions/Conditions'
 import ArmorTable from './Snippets/Armor/ArmorTable'
+import DonDoff from './Snippets/Armor/DonDoff'
+import WeaponsTable from './Snippets/Weapons/WeaponsTable'
 
 import './App.css';
 
@@ -15,7 +17,9 @@ function App() {
       <AbilityModifiers />
       <PassivePerception />
       <Conditions /> */}
-      <ArmorTable />
+      {/* <ArmorTable />
+      <DonDoff /> */}
+      <WeaponsTable />
     </div>
   );
 }
