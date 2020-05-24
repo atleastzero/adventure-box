@@ -7,6 +7,7 @@ import Conditions from './Snippets/Conditions/Conditions'
 import ArmorTable from './Snippets/Armor/ArmorTable'
 import DonDoff from './Snippets/Armor/DonDoff'
 import WeaponsTable from './Snippets/Weapons/WeaponsTable'
+import EquipmentPacks from './Snippets/Equipment/Packs/EquipmentPacks';
 
 import './App.css';
 
@@ -19,7 +20,8 @@ function App() {
       <Conditions /> */}
       {/* <ArmorTable />
       <DonDoff /> */}
-      <WeaponsTable />
+      {/* <WeaponsTable /> */}
+      <EquipmentPacks />
     </div>
   );
 }
