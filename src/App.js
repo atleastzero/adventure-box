@@ -1,29 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react';
+import { DndProvider } from 'react-dnd'
+import Backend from 'react-dnd-html5-backend'
 
-import CharacterAdvancement from './Snippets/CharacterAdvancement';
-import AbilityModifiers from './Snippets/AbilityModifiers'
-import PassivePerception from './Snippets/PassivePerception'
-import Conditions from './Snippets/Conditions/Conditions'
-import ArmorTable from './Snippets/Armor/ArmorTable'
-import DonDoff from './Snippets/Armor/DonDoff'
-import WeaponsTable from './Snippets/Weapons/WeaponsTable'
-import EquipmentPacks from './Snippets/Equipment/Packs/EquipmentPacks';
+import Screen from './Screen/Screen';
+import CustomDragLayer from './components/Utilities/Corkboard/CustomDragLayer'
 
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      {/* <CharacterAdvancement />
-      <AbilityModifiers />
-      <PassivePerception />
-      <Conditions /> */}
-      {/* <ArmorTable />
-      <DonDoff /> */}
-      {/* <WeaponsTable /> */}
-      <EquipmentPacks />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <DndProvider backend={Backend}>      
+          <Screen />
+          <CustomDragLayer />
+        </DndProvider>
+      </div>
+    );
+  }
 }
 
 export default App;
